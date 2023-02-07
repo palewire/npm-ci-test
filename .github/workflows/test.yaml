@@ -60,7 +60,7 @@ jobs:
 
       - id: version
         name: Version
-        run: npm version ${{ github.ref }}
+        run: npm version ${{ env.GITHUB_REF_NAME }}
 
       - id: publish
         name: Publish
