@@ -5,6 +5,21 @@
     "bluprint": "^0.4.0"
   },
   "scripts": {
-    "build": "rm -rf ./dist/ && mkdir ./dist/ && cp package* ./dist/"
-  }
+    "build": "rm -rf ./dist/ && mkdir ./dist/ && cp package* ./dist/ && cp index.js ./dist/"
+  },
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "mocha": "^1.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palewire/npm-ci-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/palewire/npm-ci-test/issues"
+  },
+  "homepage": "https://github.com/palewire/npm-ci-test#readme"
 }
