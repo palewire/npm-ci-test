@@ -50,7 +50,7 @@ jobs:
         name: Setup Node.JS
         uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '16'
           registry-url: 'https://registry.npmjs.org'
           scope: '@palewire'
 
@@ -62,6 +62,6 @@ jobs:
 
       - id: publish
         name: Publish
-        run: yarn publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
