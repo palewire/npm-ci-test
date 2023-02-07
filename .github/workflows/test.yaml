@@ -58,6 +58,10 @@ jobs:
         name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - id: version
+        name: Version
+        run: npm version ${{ github.ref }}
+
       - id: publish
         name: Publish
         run: npm publish --access public
