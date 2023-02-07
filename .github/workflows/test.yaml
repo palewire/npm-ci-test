@@ -58,6 +58,10 @@ jobs:
         name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - id: build
+        name: Build distribution
+        run: yarn build
+
       - id: version
         name: Version
         run: npm version ${{ github.ref_name }} --no-git-tag-version
