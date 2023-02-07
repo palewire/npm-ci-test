@@ -1,6 +1,6 @@
 {
   "name": "@palewire/npm-ci-test",
-  "version": "0.0.17",
+  "version": "0.1.0",
   "dependencies": {
     "bluprint": "^0.4.0"
   },
