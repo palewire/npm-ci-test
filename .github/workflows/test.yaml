@@ -80,4 +80,5 @@ jobs:
         run: |
           git add ./package.json
           git commit -m "Update package.json version"
+          git fetch origin ${{ github.event.repository.default_branch }}
           git push origin ${{ github.event.repository.default_branch }}
