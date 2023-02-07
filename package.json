@@ -21,5 +21,6 @@
   "bugs": {
     "url": "https://github.com/palewire/npm-ci-test/issues"
   },
-  "homepage": "https://github.com/palewire/npm-ci-test#readme"
+  "homepage": "https://github.com/palewire/npm-ci-test#readme",
+  "private": false
 }
