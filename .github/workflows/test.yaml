@@ -58,8 +58,6 @@ jobs:
         name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - run: cat ~/.npmrc
-
       - id: publish
         name: Publish
         run: npm publish
