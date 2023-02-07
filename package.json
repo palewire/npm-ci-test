@@ -4,7 +4,7 @@
     "bluprint": "^0.4.0"
   },
   "scripts": {
-    "build": "rm -rf ./dist/ && mkdir ./dist/ && cp package* ./dist/ && cp index.js ./dist/"
+    "build": "rm -rf ./dist/ && mkdir ./dist/ && cp index.js ./dist/"
   },
   "description": "",
   "main": "index.js",
