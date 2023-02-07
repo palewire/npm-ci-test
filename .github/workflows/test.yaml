@@ -58,6 +58,13 @@ jobs:
         name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - id: configure-git
+        name: Configure git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git config pull.rebase false
+
       - id: version
         name: Version
         run: npm version ${{ github.ref_name }}
@@ -67,3 +74,9 @@ jobs:
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - id: commit
+        name: Commit
+        run: |
+          git add ./package.json
+          git commit -m "Update package.json version" && git push || true
