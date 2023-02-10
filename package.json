@@ -21,5 +21,6 @@
     "url": "https://github.com/palewire/npm-ci-test/issues"
   },
   "homepage": "https://github.com/palewire/npm-ci-test#readme",
-  "private": false
+  "private": false,
+  "version": "0.0.38"
 }
