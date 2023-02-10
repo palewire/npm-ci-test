@@ -60,7 +60,7 @@ jobs:
         name: Verify default branch
         if: ${{ steps.branch.outputs.branch }} != ${{ github.event.repository.default_branch }}
         run: |
-          echo "${{ steps.branch.outputs.branch }} is not the default branch of ${{ github.event.repository.default_branch }}"
+          echo "'${{ steps.branch.outputs.branch }}' is not the default branch of '${{ github.event.repository.default_branch }}'"
           exit 1
 
       - id: setup-node
