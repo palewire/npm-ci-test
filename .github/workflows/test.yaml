@@ -53,8 +53,8 @@ jobs:
         run: |
           raw=$(git branch -r --contains ${{ github.ref }})
           branch=${raw##*/}
-          echo "::set-output name=branch::$branch"
-          echo "Branch is $branch."
+          echo "branch=$branch" >> $GITHUB_OUTPUT
+          echo "Branch is $GITHUB_OUTPUT."
 
       - id: vet
         name: Verify default branch
@@ -83,6 +83,6 @@ jobs:
 
       - id: publish
         name: Publish
-        run: npm publish ./dist --access public
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
