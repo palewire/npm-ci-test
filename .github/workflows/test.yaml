@@ -69,9 +69,9 @@ jobs:
         name: Setup Node.JS
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
-          registry-url: 'https://registry.npmjs.org'
-          scope: '@palewire'
+          node-version: 16
+          registry-url: https://registry.npmjs.org
+          scope: @palewire
 
       - id: install-deps
         name: Install dependencies
