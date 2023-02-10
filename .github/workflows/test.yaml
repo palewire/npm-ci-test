@@ -54,7 +54,7 @@ jobs:
           raw=$(git branch -r --contains ${{ github.ref }})
           branch=${raw##*/}
           echo "branch=$branch" >> $GITHUB_OUTPUT
-          echo "Branch is $GITHUB_OUTPUT."
+          echo "Branch is $branch."
 
       - id: vet
         name: Verify default branch
