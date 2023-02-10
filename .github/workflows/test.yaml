@@ -71,7 +71,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org
-          scope: @palewire
+          scope: '@palewire'
 
       - id: install-deps
         name: Install dependencies
