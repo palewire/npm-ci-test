@@ -45,6 +45,21 @@ jobs:
       - id: checkout
         name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - id: branch
+        name: Get current branch
+        run: |
+          raw=$(git branch -r --contains ${{ github.ref }})
+          branch=${raw##*/}
+          echo "::set-output name=branch::$branch"
+          echo "Branch is $branch."
+
+      - id: vet
+        name: Verify default branch
+        if: ${{ steps.branch.outputs.branch }} != ${{ github.event.repository.default_branch }}
+        run: exit 1
 
       - id: setup-node
         name: Setup Node.JS
